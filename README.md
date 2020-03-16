@@ -1,68 +1,115 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# KMK CSUI's Website
 
-## Available Scripts
+Built with React.js
 
-In the project directory, you can run:
+# Developing this project on your local
 
-### `npm start`
+Follow these steps:
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Pre-Development
+### Windows
+Go to this website and download the latest version.
+```
+https://nodejs.org/en/
+```
+Copy the address of your node.js installation and add it to Environment Variables. 
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Download your favorite Text Editor. Visual Studio Code is recommended.
+```
+https://code.visualstudio.com/
+```
 
-### `npm test`
+Install extension for your Visual Studio Code:
+```
+ES7 React/Redux/GraphQL/React-Native snippets from dsznajder
+```
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Mac
+Go to this website and download the latest version.
+```
+https://nodejs.org/en/
+```
 
-### `npm run build`
+Download your favorite Text Editor. Visual Studio Code is recommended.
+```
+https://code.visualstudio.com/
+```
+or download with brew command:
+```
+brew cask install visual-studio-code
+```
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Install extension for your Visual Studio Code:
+```
+ES7 React/Redux/GraphQL/React-Native snippets from dsznajder
+```
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### Linux
+Download React.js
+```
+sudo apt-get install nodejs npm
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Download your favorite Text Editor. Visual Studio Code is recommended.
+Follow Visual Studio Code's official guide here:
+```
+https://code.visualstudio.com/docs/setup/linux
+```
 
-### `npm run eject`
+Install extension for your Visual Studio Code:
+```
+ES7 React/Redux/GraphQL/React-Native snippets from dsznajder
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Development
+### Clone this project
+```
+git clone https://gitlab.com/kmk-csui/kmk-csui-web.git
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Switch branch to the feature name you'll build
+```
+git checkout -b <feature> development
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Example: you'll build login feature.
+```
+git checkout -b login development
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+`Note: always end it with "development" branch, not "master"!`
 
-## Learn More
+### Open project in your Text Editor
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Start the application
+```
+npm start
+```
+Open `http://localhost:3000/`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Post-Development
+If you're done developing some parts, do these steps:
 
-### Code Splitting
+### Tell git the changes you've made
+```
+git add <file>
+```
+or instead (add all files):
+```
+git add .
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+### Commit your changes
+```
+git commit -m "<your commit message>"
+```
 
-### Analyzing the Bundle Size
+### Push your changes yo gitlab
+```
+git push origin <feature>
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Example: you've build some parts of the login feature.
+```
+git push origin login
+```
