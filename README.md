@@ -104,7 +104,7 @@ git add .
 git commit -m "<your commit message>"
 ```
 
-### Push your changes yo gitlab
+### Push your changes to gitlab
 ```
 git push origin <feature>
 ```
