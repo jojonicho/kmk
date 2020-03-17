@@ -8,7 +8,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          <b>Welcome to KMK CSUI's website!</b>
+          <b>Welcome to KMK Fasilkom UI's website!</b>
         </p>
         <p>
           Website is on progress . . .
