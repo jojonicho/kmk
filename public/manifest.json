@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "KMK CS UI",
+  "name": "KMK Fasilkom UI",
   "icons": [
     {
       "src": "favicon.ico",
@@ -14,6 +14,16 @@
     },
     {
       "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "logokmk192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logokmk512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
