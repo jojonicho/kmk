@@ -11,7 +11,7 @@ Deploy:
 Follow these steps:
 
 ## Pre-Development
-* Windows
+#### Windows
 Go to this website and download the latest version.
 ```
 https://nodejs.org/en/
@@ -28,7 +28,7 @@ Install extension for your Visual Studio Code:
 ES7 React/Redux/GraphQL/React-Native snippets from dsznajder
 ```
 
-* Mac
+#### Mac
 Go to this website and download the latest version.
 ```
 https://nodejs.org/en/
@@ -48,7 +48,7 @@ Install extension for your Visual Studio Code:
 ES7 React/Redux/GraphQL/React-Native snippets from dsznajder
 ```
 
-* Linux
+#### Linux
 Download React.js
 ```cmd
 sudo apt-get install nodejs npm
@@ -82,6 +82,28 @@ git checkout -b login staging
 ```
 
 `Note: always end it with "staging" branch, not "master"!`
+
+* Open file package.json, and change this:
+```
+"scripts": {
+    "dev": "react-scripts start",
+    "heroku-postbuild": "npm run build",
+    "start": "serve -s build",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  }
+```
+into this:
+```
+"scripts": {
+    "heroku-postbuild": "npm run build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  }
+```
 
 * Open project in your Text Editor
 

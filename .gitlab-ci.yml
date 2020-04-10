@@ -21,7 +21,7 @@ staging:
     - apt-get update -qy
     - apt-get install -y ruby-dev
     - gem install dpl
-    - dpl --provider=heroku --app=${STAGING_APP_NAME} --api-key=${STAGING_API}
+    - dpl --provider=heroku --app=$STAGING_APP_NAME --api-key=$STAGING_API
   only:
     - staging
   tags:
@@ -33,7 +33,7 @@ production:
     - apt-get update -qy
     - apt-get install -y ruby-dev
     - gem install dpl
-    - dpl --provider=heroku --app=${APP_NAME} --api-key=${HEROKU_API}
+    - dpl --provider=heroku --app=$APP_NAME --api-key=$HEROKU_API
   only:
     - master
   tags:
