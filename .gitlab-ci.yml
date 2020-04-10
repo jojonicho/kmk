@@ -1,6 +1,7 @@
 stages:
   - test
   - staging
+  - production
 
 test:
   image: node:latest
@@ -10,11 +11,24 @@ test:
     - npm run test
   only:
     - master
+    - staging
   tags:
     - docker
 
 staging:
   stage: staging
+  script:
+    - apt-get update -qy
+    - apt-get install -y ruby-dev
+    - gem install dpl
+    - dpl --provider=heroku --app=${STAGING_APP_NAME} --api-key=${STAGING_API}
+  only:
+    - staging
+  tags:
+    - docker
+
+production:
+  stage: production
   script:
     - apt-get update -qy
     - apt-get install -y ruby-dev
