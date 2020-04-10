@@ -12,29 +12,29 @@ Follow these steps:
 
 ## Pre-Development
 #### Windows
-Go to this website and download the latest version.
+* Go to this website and download the latest version.
 ```
 https://nodejs.org/en/
 ```
-Copy the address of your node.js installation and add it to Environment Variables. 
+* Copy the address of your node.js installation and add it to Environment Variables. 
 
-Download your favorite Text Editor. Visual Studio Code is recommended.
+* Download your favorite Text Editor. Visual Studio Code is recommended.
 ```
 https://code.visualstudio.com/
 ```
 
-Install extension for your Visual Studio Code:
+* Install extension for your Visual Studio Code:
 ```
 ES7 React/Redux/GraphQL/React-Native snippets from dsznajder
 ```
 
 #### Mac
-Go to this website and download the latest version.
+* Go to this website and download the latest version.
 ```
 https://nodejs.org/en/
 ```
 
-Download your favorite Text Editor. Visual Studio Code is recommended.
+* Download your favorite Text Editor. Visual Studio Code is recommended.
 ```
 https://code.visualstudio.com/
 ```
@@ -43,24 +43,24 @@ or download with brew command:
 brew cask install visual-studio-code
 ```
 
-Install extension for your Visual Studio Code:
+* Install extension for your Visual Studio Code:
 ```
 ES7 React/Redux/GraphQL/React-Native snippets from dsznajder
 ```
 
 #### Linux
-Download React.js
+* Download React.js
 ```cmd
 sudo apt-get install nodejs npm
 ```
 
-Download your favorite Text Editor. Visual Studio Code is recommended.
+* Download your favorite Text Editor. Visual Studio Code is recommended.
 Follow Visual Studio Code's official guide here:
 ```
 https://code.visualstudio.com/docs/setup/linux
 ```
 
-Install extension for your Visual Studio Code:
+* Install extension for your Visual Studio Code:
 ```
 ES7 React/Redux/GraphQL/React-Native snippets from dsznajder
 ```
