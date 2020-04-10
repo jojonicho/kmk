@@ -1,20 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './components/navbar/Navbar';
+import { BrowserRouter, Route } from 'react-router-dom';
+import HomeContainer from './HomeContainer'
+import DivisiContainer from './DivisiContainer'
+import GaleriContainer from './GaleriContainer'
+import Footer from './components/footer/Footer';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          <b>Welcome to KMK Fasilkom UI's website!</b>
-        </p>
-        <p>
-          Website is on progress . . .
-        </p>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Navbar />
+        <Route exact path='/' component={HomeContainer} />
+        <Route path='/divisi' component={DivisiContainer} />
+        <Route path='/galeri' component={GaleriContainer} />
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
 
