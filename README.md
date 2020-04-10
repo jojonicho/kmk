@@ -3,8 +3,8 @@
 Built with React.js
 
 Deploy:
-[Production](kmk-csui-web.herokuapp.com)
-[Staging](kmkcsui-staging.herokuapp.com)
+[Production](https://kmk-csui-web.herokuapp.com)
+[Staging](https://kmkcsui-staging.herokuapp.com)
 
 # Developing this project on your local
 
