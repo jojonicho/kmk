@@ -71,14 +71,19 @@ ES7 React/Redux/GraphQL/React-Native snippets from dsznajder
 git clone https://gitlab.com/kmk-csui/kmk-csui-web.git
 ```
 
+* Go to kmk-csui-web folder
+```cmd
+cd kmk-csui-web
+```
+
 * Switch branch to the feature name you'll build
 ```cmd
-git checkout -b <feature> staging
+git checkout -b <name>/<feature> staging
 ```
 
 Example: you'll build login feature.
 ```cmd
-git checkout -b login staging
+git checkout -b joni/navbar-footer staging
 ```
 
 `Note: always end it with "staging" branch, not "master"!`
@@ -107,6 +112,11 @@ into this:
 
 * Open project in your Text Editor
 
+* Do this first
+```cmd
+npm install
+```
+
 * Start the application
 ```cmd
 npm start
@@ -132,12 +142,12 @@ git commit -m "<your commit message>"
 
 * Push your changes to gitlab
 ```cmd
-git push origin <feature>
+git push origin <name>/<feature>
 ```
 
 Example: you've build some parts of the login feature.
 ```cmd
-git push origin login
+git push origin joni/navbar-footer
 ```
 
 ## If there is any update from staging, do:
