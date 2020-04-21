@@ -1,10 +1,10 @@
 import React from 'react'
 import './Footer.css'
 
-function Footer() {
+const Footer = () => {
     return (
-        <div>
-            Footer
+        <div className="footer">
+        <p>Copyright © 2020 - KMK Fasilkom UI 2020</p>
         </div>
     )
 }

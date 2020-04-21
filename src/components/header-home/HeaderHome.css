@@ -1,0 +1,28 @@
+.headerhome{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5vw;
+    background-image: var(--gradient);
+    background-size: 230%;
+    animation: bg-anim 11s infinite alternate;
+}
+@keyframes bg-anim {
+    0% {
+        background-position: left;
+    }
+    100%{
+        background-position: right;
+    }
+}
+
+.header-logo{
+    display: inline-block;
+    width: calc(12vw + 15rem);
+}
+.intro{
+    font-size: calc(1rem + 2vw);
+    font-weight: bold;
+    word-wrap: none;
+}

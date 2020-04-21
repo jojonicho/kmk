@@ -1,62 +1,96 @@
-import React, { useState, useEffect } from 'react'
-import './style.js'
+import React, { useState } from 'react'
 import KMK from '../../assets/kmk.svg';
 import { Link } from "react-router-dom";
-import { HeaderFooterContainer } from "./style";
+import { NavbarContainer } from "./style";
+import { stack as Menu } from "react-burger-menu"
+import { useMediaQuery } from 'react-responsive'
+import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 
 const Navbar = props => {
-    const [menuHeight, setMenuHeight] = useState("0px");
-    const [menuOverflow, setMenuOverflow] = useState(false);
-    const [menu, setMenu] = useState(false);
+    var styles = {
+        bmBurgerButton: {
+            position: 'fixed',
+            width: '25px',
+            height: '25px',
+            right: '25px',
+            top: '25px'
+        },
+        bmBurgerBars: {
+            height: '2.5px',
+            background: '#373a47'
+        },
+        bmBurgerBarsHover: {
+            background: '#a90000'
+        },
+        bmCross: {
+            background: '#bdc3c7'
+        },
+        bmMenu: {
+            background: '#373a47',
+            padding: '2.5em 3em',
+            fontSize: '1.5em'
+        },
+        bmItemList: {
+            color: '#b8b7ad',
+            padding: '0.8em'
+        },
+        bmItem: {
+            display: 'block',
+            color: "white",
+            padding: '1em',
+        },
+    }
 
-    const { children, color } = props;
+    const [hideOnScroll, setHideOnScroll] = useState(true)
+    const [pos, setPos] = useState(0)
+  
+    useScrollPosition(({ prevPos, currPos }) => {
+      const isShow = currPos.y > prevPos.y
+      setPos(currPos.y)
+      console.log(currPos)
+      if (isShow !== hideOnScroll) setHideOnScroll(isShow)
+    }, [hideOnScroll, pos])
 
-    const colors = {
-        white: { backgroundColor: "#E2C7C0", color: "333333"},
-        pink: { backgroundColor: '#E9ADB7', color: "white" },
-        green: { backgroundColor: "#D1E9D6", color: "black" },
-        blue: { backgroundColor: "#454FCB", color: "white" },
-        yellow: { backgroundColor: "#F1CF33", color: "#454FCB" },
-        red: { backgroundColor: "#EA6229", color: "white" },
-        dark: { backgroundColor: "#0D2040", color: "white", transition: "0.5s" },
-        // notShown: {
-        //     backgroundColor: "#0D2040",
-        //     color: "white",
-        //     transform: "translateY(-100vh)",
-        //     transition: "0.5s"
-        // }
-    };
+    const xl = useMediaQuery({
+        query: '(min-device-width: 1224px)'
+    })
+    const { isOpen } = props;
 
     return (
-        <HeaderFooterContainer>
-            <div className="header" style={colors[color]}>
-                <div>
-                    <Link to="/" className="no-decor">
-                        <img className="logo" src={KMK} alt="logo"></img>
-                    </Link>
-                </div>
+        <>
+            {xl
+                ?
+                <NavbarContainer show={hideOnScroll} pos={pos}>
+                    <nav>
+                        <div>
+                            <Link to="/" className="no-decor">
+                                <img className="logo" src={KMK} alt="logo" />
+                            </Link>
+                        </div>
 
-                <div className="menu">
-                    <Link to="/divisi">
-                        <div className="menu-item">
-                            <h2 className="daftar">Divisi</h2>
+                        <div className="menu">
+                            <Link to="/divisi">
+                                <div className="menu-item">
+                                    <h2 className="daftar">Divisi</h2>
+                                </div>
+                            </Link>
+                            <Link to="/galeri">
+                                <div className="menu-item">
+                                    <h2 className="daftar">Galeri</h2>
+                                </div>
+                            </Link>
                         </div>
-                    </Link>
-                    <Link to="/galeri">
-                        <div className="menu-item">
-                            <h2 className="daftar">Galeri</h2>
-                        </div>
-                    </Link>
-                </div>
-            </div>
-            {/* <div className={"childcontainer"}> */} 
-            <div>
-                {children}
-            </div>
-            <div className="footer" style={colors.green}>
-                <p>Copyright © 2020 - KMK Fasilkom UI 2020</p>
-            </div>
-        </HeaderFooterContainer>
+                    </nav>
+                </NavbarContainer>
+                :
+                <Menu styles={styles} right isOpen={isOpen}>
+                    <a className="" href="/">Home</a>
+                    <a className="menu-item" href="/divisi">Divisi</a>
+                    <a className="menu-item" href="/galeri">Galeri</a>
+                    <img className="logo-sidebar" src={KMK} alt="logo" />
+                </Menu>
+            }
+        </>
     );
 }
 
