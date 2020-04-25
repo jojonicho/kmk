@@ -1,0 +1,13 @@
+.footer{
+    background-image: var(--gradient);
+    background-size: 230%;
+    animation: bg-anim 11s infinite alternate;
+}
+@keyframes bg-anim {
+    0% {
+        background-position: left;
+    }
+    70%{
+        background-position: right;
+    }
+}
