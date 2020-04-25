@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
+import Footer from './components/Footer/Footer';
 import { BrowserRouter, Route } from 'react-router-dom';
-import HomeContainer from './HomeContainer'
-import DivisiContainer from './DivisiContainer'
-import GaleriContainer from './GaleriContainer'
-import Footer from './components/footer/Footer';
+import HomeContainer from './HomeContainer';
+import DivisiContainer from './DivisiContainer';
+import GaleriContainer from './GaleriContainer';
 // import {ThemeProvider} from 'styled-components'
 // import {theme} from './theme'
 import { AppContainer } from './style'
