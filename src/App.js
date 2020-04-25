@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './App.css';
-import Navbar from './components/Navbar/Navbar';
-import Footer from './components/Footer/Footer';
+import Navbar from './components/navbar/Navbar';
+import Footer from './components/footer/Footer';
 import { BrowserRouter, Route } from 'react-router-dom';
 import HomeContainer from './HomeContainer';
 import DivisiContainer from './DivisiContainer';

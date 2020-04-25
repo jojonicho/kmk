@@ -1,10 +1,10 @@
-import React, { useState } from './node_modules/react'
+import React, { useState } from 'react'
 import KMK from '../../assets/kmk.svg';
-import { Link } from "./node_modules/react-router-dom";
+import { Link } from "react-router-dom";
 import { NavbarContainer } from "./style";
-import { stack as Menu } from "./node_modules/react-burger-menu"
-import { useMediaQuery } from './node_modules/react-responsive'
-import { useScrollPosition } from './node_modules/@n8tb1t/use-scroll-position'
+import { stack as Menu } from "react-burger-menu"
+import { useMediaQuery } from 'react-responsive'
+import { useScrollPosition } from '@n8tb1t/use-scroll-position'
 
 const Navbar = props => {
     var styles = {
