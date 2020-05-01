@@ -47,7 +47,6 @@ const Navbar = props => {
     useScrollPosition(({ prevPos, currPos }) => {
       const isShow = currPos.y > prevPos.y
       setPos(currPos.y)
-      console.log(currPos)
       if (isShow !== hideOnScroll) setHideOnScroll(isShow)
     }, [hideOnScroll, pos])
 
